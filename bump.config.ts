@@ -3,7 +3,7 @@ import { dependencies } from './package.json'
 
 export default defineConfig({
   customVersion: (version) => {
-    const eslintVersion = dependencies.eslint.replace('^', '')
+    const eslintVersion = dependencies['unplugin-vue-components'].replace('^', '')
     let [mainVersion, subVersion] = version.split('-')
     if (!subVersion)
       subVersion = '0'
