@@ -3,7 +3,7 @@
   "type": "module",
   "version": "0.26.0-0",
   "packageManager": "pnpm@8.12.1",
-  "description": "Support jsx for unplugin-vue-components",
+  "description": "Support JSX for unplugin-vue-components",
   "author": "zhiyuanzmj <zhiyuanzmj@gmail.com>",
   "license": "MIT",
   "homepage": "https://github.com/unplugin-vue-components-jsx#readme",
