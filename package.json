@@ -1,0 +1,83 @@
+{
+  "name": "unplugin-vue-components-jsx",
+  "type": "module",
+  "version": "0.26.0-0",
+  "packageManager": "pnpm@8.12.1",
+  "description": "Support jsx for unplugin-vue-components",
+  "author": "zhiyuanzmj <zhiyuanzmj@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/unplugin-vue-components-jsx#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhiyuanzmj/unplugin-vue-components-jsx.git"
+  },
+  "bugs": "https://github.com/unplugin-vue-components-jsx/issues",
+  "keywords": [
+    "eslint"
+  ],
+  "exports": {
+    "./nuxt": {
+      "import": "./lib/nuxt.js",
+      "require": "./node_modules/unplugin-vue-components/dist/nuxt.cjs"
+    },
+    "./rollup": {
+      "import": "./lib/rollup.js",
+      "require": "./node_modules/unplugin-vue-components/dist/rollup.cjs"
+    },
+    "./vite": {
+      "import": "./lib/vite.js",
+      "require": "./node_modules/unplugin-vue-components/dist/vite.cjs"
+    },
+    "./webpack": {
+      "import": "./lib/webpack.js",
+      "require": "./node_modules/unplugin-vue-components/dist/webpack.cjs"
+    },
+    "./rspack": {
+      "import": "./lib/rspack.js",
+      "require": "./node_modules/unplugin-vue-components/dist/rspack.cjs"
+    },
+    "./esbuild": {
+      "import": "./lib/esbuild.js",
+      "require": "./node_modules/unplugin-vue-components/dist/esbuild.cjs"
+    },
+    "./*": "./node_modules/unplugin-vue-components/dist/*"
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "lint": "eslint .",
+    "release": "bumpp && npm publish",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit",
+    "prepare": "simple-git-hooks"
+  },
+  "dependencies": {
+    "unplugin-vue-components": "^0.26.0"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^2.6.0",
+    "@antfu/ni": "^0.21.12",
+    "@types/eslint": "^8.56.0",
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^20.10.5",
+    "bumpp": "^9.2.1",
+    "eslint": "^8.56.0",
+    "esno": "^4.0.0",
+    "execa": "^8.0.1",
+    "fs-extra": "^11.2.0",
+    "lint-staged": "^15.2.0",
+    "pnpm": "^8.12.1",
+    "rimraf": "^5.0.5",
+    "simple-git-hooks": "^2.9.0",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.10",
+    "vitest": "^1.1.0"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
+  }
+}
