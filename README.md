@@ -9,7 +9,7 @@
 Support JSX for unplugin-vue-components. Inspired by [eslint-ts-patch](https://github.com/antfu/eslint-ts-patch).
 
 Context:
-- [unplugin-vue-components don't support jsx](https://github.com/unplugin/unplugin-vue-components/issues/208)
+- [unplugin-vue-components don't support JSX](https://github.com/unplugin/unplugin-vue-components/issues/208)
 
 ## Install
 

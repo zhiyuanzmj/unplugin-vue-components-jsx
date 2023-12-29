@@ -17,45 +17,23 @@
     "jsx"
   ],
   "exports": {
-    "./nuxt": {
-      "import": "./lib/nuxt.js",
-      "require": "./node_modules/unplugin-vue-components/dist/nuxt.cjs"
-    },
-    "./rollup": {
-      "import": "./lib/rollup.js",
-      "require": "./node_modules/unplugin-vue-components/dist/rollup.cjs"
-    },
-    "./vite": {
-      "import": "./lib/vite.js",
-      "require": "./node_modules/unplugin-vue-components/dist/vite.cjs"
-    },
-    "./webpack": {
-      "import": "./lib/webpack.js",
-      "require": "./node_modules/unplugin-vue-components/dist/webpack.cjs"
-    },
-    "./rspack": {
-      "import": "./lib/rspack.js",
-      "require": "./node_modules/unplugin-vue-components/dist/rspack.cjs"
-    },
-    "./esbuild": {
-      "import": "./lib/esbuild.js",
-      "require": "./node_modules/unplugin-vue-components/dist/esbuild.cjs"
-    },
-    "./resolvers": {
-      "import": "./node_modules/unplugin-vue-components/dist/resolvers.cjs",
-      "require": "./node_modules/unplugin-vue-components/dist/resolvers.cjs"
-    },
-    "./*": "./node_modules/unplugin-vue-components/dist/*"
+    "./nuxt": "./lib/nuxt.js",
+    "./rollup": "./lib/rollup.js",
+    "./vite": "./lib/vite.js",
+    "./vite.d": "./lib/vite.d.js",
+    "./webpack": "./lib/webpack.js",
+    "./rspack": "./lib/rspack.js",
+    "./esbuild": "./lib/esbuild.js",
+    "./resolvers": "./lib/resolvers.js"
   },
   "typesVersions": {
     "*": {
       "*": [
-        "./node_modules/unplugin-vue-components/dist/*"
+        "./lib/*"
       ]
     }
   },
   "files": [
-    "./node_modules/unplugin-vue-components",
     "lib"
   ],
   "scripts": {
