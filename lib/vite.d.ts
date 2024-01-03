@@ -1,3 +1,1 @@
-/// <reference types="unplugin-vue-components/vite" />
-
-export {}
+export { default } from 'unplugin-vue-components/vite'

@@ -1,3 +1,1 @@
-/// <reference types="unplugin-vue-components/webpack" />
-
-export {}
+export { default } from 'unplugin-vue-components/webpack'

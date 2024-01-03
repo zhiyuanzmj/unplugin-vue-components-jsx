@@ -1,3 +1,1 @@
-/// <reference types="unplugin-vue-components/nuxt" />
-
-export {}
+export { default } from 'unplugin-vue-components/nuxt'

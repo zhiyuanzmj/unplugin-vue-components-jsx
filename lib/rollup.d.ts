@@ -1,3 +1,1 @@
-/// <reference types="unplugin-vue-components/rollup" />
-
-export {}
+export { default } from 'unplugin-vue-components/rollup'

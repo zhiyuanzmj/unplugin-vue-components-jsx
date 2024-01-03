@@ -1,3 +1,1 @@
-/// <reference types="unplugin-vue-components/rspack" />
-
-export {}
+export { default } from 'unplugin-vue-components/rspack'

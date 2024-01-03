@@ -1,3 +1,1 @@
-/// <reference types="unplugin-vue-components/esbuild" />
-
-export {}
+export { default } from 'unplugin-vue-components/esbuild'
