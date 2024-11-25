@@ -9,6 +9,7 @@ export default antfu(
   {
     rules: {
       // overrides
+      'antfu/no-top-level-await': 'off',
     },
   },
 )

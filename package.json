@@ -1,7 +1,7 @@
 {
   "name": "unplugin-vue-components-jsx",
   "type": "module",
-  "version": "0.27.3-1",
+  "version": "0.27.4-0",
   "packageManager": "pnpm@8.12.1",
   "description": "Support JSX for unplugin-vue-components",
   "author": "zhiyuanzmj <zhiyuanzmj@gmail.com>",
@@ -24,19 +24,29 @@
     "./webpack": "./lib/webpack.js",
     "./rspack": "./lib/rspack.js",
     "./esbuild": "./lib/esbuild.js",
-    "./resolvers": "./lib/resolvers.js"
+    "./resolvers": "./lib/resolvers.js",
+    "./volar": {
+      "import": "./dist/volar.js",
+      "require": "./dist/volar.cjs"
+    }
   },
   "typesVersions": {
     "*": {
+      "volar": [
+        "./dist/volar.cjs"
+      ],
       "*": [
         "./lib/*"
       ]
     }
   },
   "files": [
+    "dist",
     "lib"
   ],
   "scripts": {
+    "dev": "tsup --watch",
+    "build": "tsup --minify",
     "lint": "eslint .",
     "release": "bumpp && npm publish",
     "test": "vitest",
@@ -44,26 +54,27 @@
     "prepare": "simple-git-hooks"
   },
   "dependencies": {
-    "unplugin-vue-components": "^0.27.3"
+    "unplugin-vue-components": "^0.27.4"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^2.23.2",
-    "@antfu/ni": "^0.22.0",
-    "@types/eslint": "^9.6.0",
+    "@antfu/eslint-config": "^3.9.2",
+    "@antfu/ni": "^0.23.1",
+    "@types/eslint": "^9.6.1",
     "@types/fs-extra": "^11.0.4",
-    "@types/node": "^20.14.12",
-    "bumpp": "^9.4.1",
-    "eslint": "^9.7.0",
-    "esno": "^4.7.0",
-    "execa": "^9.3.0",
+    "@types/node": "^22.9.4",
+    "bumpp": "^9.8.1",
+    "eslint": "^9.15.0",
+    "execa": "^9.5.1",
     "fs-extra": "^11.2.0",
-    "lint-staged": "^15.2.7",
-    "pnpm": "^9.6.0",
+    "lint-staged": "^15.2.10",
+    "pnpm": "^9.14.2",
     "rimraf": "^6.0.1",
     "simple-git-hooks": "^2.11.1",
-    "typescript": "^5.5.4",
-    "vite": "^5.3.5",
-    "vitest": "^2.0.4"
+    "ts-macro": "^0.1.9",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2",
+    "vite": "^5.4.11",
+    "vitest": "^2.1.5"
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm lint-staged"
