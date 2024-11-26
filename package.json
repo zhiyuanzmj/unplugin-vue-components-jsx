@@ -1,7 +1,7 @@
 {
   "name": "unplugin-vue-components-jsx",
   "type": "module",
-  "version": "0.27.4-2",
+  "version": "0.27.4-3",
   "packageManager": "pnpm@9.14.2",
   "description": "Support JSX for unplugin-vue-components",
   "author": "zhiyuanzmj <zhiyuanzmj@gmail.com>",
