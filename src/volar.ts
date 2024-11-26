@@ -4,7 +4,6 @@ import { createPlugin } from 'ts-macro'
 const plugin = createPlugin<Options | undefined>(({ ts }, options) => {
   const currentDirectory = ts.sys.getCurrentDirectory()
   const dts = typeof options?.dts === 'string' ? options.dts : `${ts.sys.getCurrentDirectory()}/components.d.ts`
-
   function getComponents() {
     const configContent = ts.sys.readFile(dts)
     if (!configContent)
@@ -45,6 +44,7 @@ const plugin = createPlugin<Options | undefined>(({ ts }, options) => {
     })
     return result
   }
+
   let watched = false
   let components: Record<string, string> | undefined
   return {
@@ -83,7 +83,7 @@ const plugin = createPlugin<Options | undefined>(({ ts }, options) => {
 
         if (ts.isJsxOpeningElement(node) || ts.isJsxSelfClosingElement(node)) {
           const name = node.tagName.getText(ast)
-          if (components?.[name]) {
+          if (components?.[name] && !imports.includes(name)) {
             nodes.push(components[name].replace('./', `${currentDirectory}/`))
           }
         }
