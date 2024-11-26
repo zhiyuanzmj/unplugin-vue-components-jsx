@@ -46,11 +46,10 @@ const plugin = createPlugin<Options | undefined>(({ ts }, options) => {
     return result
   }
   let watched = false
-
+  let components: Record<string, string> | undefined
   return {
     name: 'ts-macro-components-jsx',
     resolveVirtualCode({ codes, ast }) {
-      let components: Record<string, string> | undefined
       if (!watched) {
         components = getComponents()
         ts.sys.watchFile?.(dts, () => {
